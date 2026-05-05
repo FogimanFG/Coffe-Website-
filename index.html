@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кубань Какао | Лучший кофе в Краснодаре</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="#hero" class="header__logo" aria-label="На главную">
+                    <span class="logo-text">Kuban Cocoa</span>
+                </a>
+                
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#hero" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
+                        <li class="nav__item"><a href="#promo" class="nav__link">Акции</a></li>
+                        <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                        <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="header__order-btn" id="orderBtn" aria-label="Заказать">
+                    <i class="fas fa-mug-hot"></i> Заказать
+                </button>
+                
+                <button class="header__burger" id="burgerBtn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero__slider">
+            <div class="hero__slider-container" id="sliderContainer"></div>
+            
+            <button class="hero__slider-btn hero__slider-btn--prev" id="prevBtn" aria-label="Предыдущий слайд">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero__slider-btn hero__slider-btn--next" id="nextBtn" aria-label="Следующий слайд">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="hero__slider-dots" id="sliderDots"></div>
+        </div>
+        
+        <div class="hero__content">
+            <div class="container">
+                <h1 class="hero__title fade-in">Лучший кофе в Краснодаре!</h1>
+                <p class="hero__subtitle fade-in">Свежий обжар, десерты ручной работы</p>
+                <a href="#menu" class="hero__cta-btn fade-in">Посмотреть меню</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="menu section" id="menu">
+        <div class="container">
+            <h2 class="section__title">Наше меню</h2>
+            <p class="section__subtitle">Попробуйте наши лучшие предложения</p>
+            
+            <div class="menu__grid">
+                <div class="menu__card card-animation">
+                    <div class="menu__card-image">
+                        <img src="img/menu1.avif" alt="Кофе латте с пирожным" loading="lazy">
+                    </div>
+                    <div class="menu__card-content">
+                        <h3 class="menu__card-title">Латте Арт</h3>
+                        <p class="menu__card-desc">Нежный кофе с молочной пеной и авторским рисунком</p>
+                        <div class="menu__card-footer">
+                            <span class="menu__card-price">280 ₽</span>
+                            <button class="menu__card-order" data-product="Латте Арт">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu__card card-animation">
+                    <div class="menu__card-image">
+                        <img src="img/menu2.avif" alt="Шоколадный торт" loading="lazy">
+                    </div>
+                    <div class="menu__card-content">
+                        <h3 class="menu__card-title">Шоколадный торт</h3>
+                        <p class="menu__card-desc">Насыщенный шоколадный торт с ягодным соусом</p>
+                        <div class="menu__card-footer">
+                            <span class="menu__card-price">320 ₽</span>
+                            <button class="menu__card-order" data-product="Шоколадный торт">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu__card card-animation">
+                    <div class="menu__card-image">
+                        <img src="img/menu3.avif" alt="Какао со сливками" loading="lazy">
+                    </div>
+                    <div class="menu__card-content">
+                        <h3 class="menu__card-title">Какао Премиум</h3>
+                        <p class="menu__card-desc">Горячий шоколад со взбитыми сливками и зефиром</p>
+                        <div class="menu__card-footer">
+                            <span class="menu__card-price">250 ₽</span>
+                            <button class="menu__card-order" data-product="Какао Премиум">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="promo section" id="promo">
+        <div class="container">
+            <div class="promo__content">
+                <h2 class="section__title">Специальное предложение!</h2>
+                <p class="promo__text">Скидка 20% на все напитки до конца января</p>
+                
+                <div class="promo__timer">
+                    <p class="promo__timer-title">До конца акции осталось:</p>
+                    <div class="timer__display">
+                        <div class="timer__unit">
+                            <span class="timer__number" id="days">00</span>
+                            <span class="timer__label">Дней</span>
+                        </div>
+                        <div class="timer__unit">
+                            <span class="timer__number" id="hours">00</span>
+                            <span class="timer__label">Часов</span>
+                        </div>
+                        <div class="timer__unit">
+                            <span class="timer__number" id="minutes">00</span>
+                            <span class="timer__label">Минут</span>
+                        </div>
+                        <div class="timer__unit">
+                            <span class="timer__number" id="seconds">00</span>
+                            <span class="timer__label">Секунд</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="promo__btn" id="promoOrderBtn">Заказать со скидкой</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="reviews section" id="reviews">
+        <div class="container">
+            <h2 class="section__title">Отзывы наших гостей</h2>
+            <p class="section__subtitle">Что говорят наши клиенты</p>
+            
+            <div class="reviews__slider">
+                <div class="reviews__container" id="reviewsContainer">
+                    <div class="review__card">
+                        <div class="review__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review__text">"Лучший кофе в городе! Атмосфера уютная, персонал внимательный. Обязательно вернусь!"</p>
+                        <div class="review__author">
+                            <span class="review__name">Анна Петрова</span>
+                            <span class="review__date">15 января 2026</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review__card">
+                        <div class="review__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review__text">"Шоколадный торт — просто объедение! Кофе всегда свежий и ароматный. Рекомендую!"</p>
+                        <div class="review__author">
+                            <span class="review__name">Иван Сидоров</span>
+                            <span class="review__date">10 января 2026</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review__card">
+                        <div class="review__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review__text">"Идеальное место для встреч с друзьями. Wi-Fi быстрый, цены адекватные. 5 звёзд!"</p>
+                        <div class="review__author">
+                            <span class="review__name">Мария Ковалёва</span>
+                            <span class="review__date">5 января 2026</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews__nav">
+                    <button class="reviews__nav-btn" id="reviewPrevBtn" aria-label="Предыдущий отзыв">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="reviews__nav-btn" id="reviewNextBtn" aria-label="Следующий отзыв">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contacts section" id="contacts">
+        <div class="container">
+            <h2 class="section__title">Контакты</h2>
+            <p class="section__subtitle">Приходите в гости или оставьте заявку</p>
+            
+            <div class="contacts__content">
+                <div class="contacts__map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.8484690387624!2d38.97466131554478!3d45.04020397909824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04f9c6c8c8c8f%3A0x7c7c7c7c7c7c7c7c!2z0JrRgNCw0YHQvdC-0LTQsNGALCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sru!4v1610000000000!5m2!1sru!2sru" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        aria-label="Карта с расположением кафе в Краснодаре">
+                    </iframe>
+                </div>
+                
+                <div class="contacts__form">
+                    <form id="contactForm">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Имя</label>
+                            <input type="text" id="name" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Телефон</label>
+                            <input type="tel" id="phone" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Сообщение</label>
+                            <textarea id="message" class="form__textarea" rows="4" placeholder="Напишите ваш вопрос или пожелание..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form__submit-btn">Отправить заявку</button>
+                    </form>
+                    
+                    <div class="contacts__info">
+                        <div class="contact__item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Краснодар, ул. Красная, 100</span>
+                        </div>
+                        <div class="contact__item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (861) 123-45-67</span>
+                        </div>
+                        <div class="contact__item">
+                            <i class="fas fa-clock"></i>
+                            <span>Пн-Вс: 8:00 - 23:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <span class="logo-text">Kuban Cocoa</span>
+                    <p class="footer__tagline">Лучший кофе в Краснодаре с 2020 года</p>
+                </div>
+                
+                <div class="footer__social">
+                    <a href="#" class="social__link" aria-label="ВКонтакте">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="social__link" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social__link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social__link" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                
+                <div class="footer__links">
+                    <a href="#menu" class="footer__link">Меню</a>
+                    <a href="#promo" class="footer__link">Акции</a>
+                    <a href="#reviews" class="footer__link">Отзывы</a>
+                    <a href="#contacts" class="footer__link">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="footer__copyright">
+                <p>&copy; 2026 Кубань Какао. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="orderModal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="modal__title">Заказать</h2>
+            <p class="modal__subtitle">Оставьте ваши данные и мы перезвоним</p>
+            
+            <form id="orderForm">
+                <div class="form__group">
+                    <label for="orderName" class="form__label">Имя</label>
+                    <input type="text" id="orderName" class="form__input" required>
+                </div>
+                
+                <div class="form__group">
+                    <label for="orderPhone" class="form__label">Телефон</label>
+                    <input type="tel" id="orderPhone" class="form__input" required>
+                </div>
+                
+                <div class="form__group">
+                    <label for="orderProduct" class="form__label">Выбранный продукт</label>
+                    <input type="text" id="orderProduct" class="form__input" readonly>
+                </div>
+                
+                <button type="submit" class="form__submit-btn">Отправить заказ</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/slider.js"></script>
+    <script src="js/modal.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            const burgerBtn = document.getElementById('burgerBtn');
+            const nav = document.querySelector('.header__nav');
+            
+            burgerBtn.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                burgerBtn.classList.toggle('active');
+            });
+            
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.card-animation').forEach(card => {
+                observer.observe(card);
+            });
+            
+
+            function updateTimer() {
+                const endDate = new Date('January 31, 2026 23:59:59').getTime();
+                const now = new Date().getTime();
+                const timeLeft = endDate - now;
+                
+                if(timeLeft < 0) {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+                
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+            
+            updateTimer();
+            setInterval(updateTimer, 1000);
+            
+
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+                this.reset();
+            });
+            
+
+            let currentReview = 0;
+            const reviewCards = document.querySelectorAll('.review__card');
+            const reviewContainer = document.getElementById('reviewsContainer');
+            
+            document.getElementById('reviewPrevBtn').addEventListener('click', () => {
+                currentReview = (currentReview - 1 + reviewCards.length) % reviewCards.length;
+                updateReviewSlider();
+            });
+            
+            document.getElementById('reviewNextBtn').addEventListener('click', () => {
+                currentReview = (currentReview + 1) % reviewCards.length;
+                updateReviewSlider();
+            });
+            
+            function updateReviewSlider() {
+                const cardWidth = reviewCards[0].offsetWidth + 30; 
+                reviewContainer.style.transform = `translateX(-${currentReview * cardWidth}px)`;
+            }
+            
+
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach(el => {
+                    el.classList.add('visible');
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>
